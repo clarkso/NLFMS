@@ -1,0 +1,10 @@
+{
+    "name": "Consul",
+    "apiVersion": "0.2",
+    "description": "This is the Consul.io HTTP API",
+    "includes": [
+        "key_value_store.json",
+        "agent.json",
+        "catalog.json"
+    ]
+}

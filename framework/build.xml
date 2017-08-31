@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NinthLeafFramework" description="Ninth Leaf Framework 3.0" default="build">
+	<target name="build">
+		<echo msg="Pharing files into phar file..." />
+		<pharpackage destfile="./nlf.phar" basedir="./">
+			<fileset dir="./">
+				<include name="**/**" />
+			</fileset>
+			<metadata>
+				<element name="version" value="1.0" />
+				<element name="authors">
+					<element name="Clark So">
+						<element name="e-mail" value="clark.so@9leaf.com" />
+					</element>
+				</element>
+			</metadata>
+		</pharpackage>
+		<echo msg="Copying files to build directory..." />
+		<copy file="nlf.phar"
+			tofile="/Users/clarkso/Sites/NLFMS/demo/nlf.phar"
+			overwrite="true" />
+
+		<echo msg="Finished deploy, enjoy it!" />
+	</target>
+</project>
